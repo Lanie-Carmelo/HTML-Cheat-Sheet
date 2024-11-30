@@ -5,10 +5,298 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Cheat Sheet</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-
+    <h1>HTML Cheat Sheet</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Tag
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Attributes
+                </th>
+                <th>
+                    Example
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    &lt;table&gt;
+                </td>
+                <td>
+                    Defines the structure of a table and contains all other table elements.
+                </td>
+                <td>
+                    None, use CSS to style.
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cell content&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                        </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;tr&gt;
+                </td>
+                <td>
+                    Defines a table row.
+                </td>
+                <td>
+                    Global attributes only (for example: id, class, style)
+                </td>
+                <td>
+                    <pre>
+&lt;tr&gt;
+    &lt;td&gt;Cell 1&lt;/td&gt;
+    &lt;td&gt;Cell 2&lt;/td&gt;
+&lt;/tr&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;th&gt;
+                </td>
+                <td>
+                    Defines a table header cell.
+                </td>
+                <td>
+                    <ul>
+                        <li><strong>scope</strong>: Specifies header's association</li>
+                        <li><strong>colspan</strong>: Number of columns to span</li>
+                        <li><strong>rowspan</strong>: Number of rows to span</li>
+                        <li><strong>headers</strong>: Associates with other headers</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;th scope="col" colspan="2"&gt;Header Cell&lt;/th&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;td&gt;
+                </td>
+                <td>
+                    Defines a standard data cell in a table.
+                </td>
+                <td>
+                    <ul>
+                        <li><strong>colspan</strong>: Specifies the number of columns a cell should span</li>
+                        <li><strong>rowspan</strong>: Specifies the number of rows a cell should span</li>
+                        <li>Global attributes (e.g., class, id, style)</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;td colspan="2"&gt;Cell content&lt;/td&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;caption&gt;
+                </td>
+                <td>
+                    Specifies a caption for a table, useful for providing more information about the table's contents.
+                </td>
+                <td>
+                    <ul>
+                        <li>Global attributes only</li>
+                        <li>Use CSS to style (e.g., caption-side, text-align)</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+    &lt;caption&gt;Monthly Savings&lt;/caption&gt;
+    &lt;!-- table content --&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;thead&gt;
+                </td>
+                <td>
+                    Groups header content in a table.
+                </td>
+                <td>
+                    <ul>
+                        <li>Global attributes only.</li>
+                        <li>Use CSS to style.</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;!-- table body content --&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;tbody&gt;
+                </td>
+                <td>
+                    Groups body content of a table.
+                </td>
+                <td>
+                    <ul>
+                        <li>Global attributes only.</li>
+                        <li>Use CSS to style.</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jane&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;tfoot&gt;
+                </td>
+                <td>
+                    Groups footer content for a table.
+                </td>
+                <td>
+                    <ul>
+                        <li>Global attributes only.</li>
+                        <li>Use CSS for style.</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Item&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Apple&lt;/td&gt;
+            &lt;td&gt;$1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Banana&lt;/td&gt;
+            &lt;td&gt;$0.50&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Total&lt;/td&gt;
+            &lt;td&gt;$1.50&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;colgroup&gt;
+                </td>
+                <td>
+                    Specifies a group of columns for formatting.
+                </td>
+                <td>
+                    <ul>
+                        <li><strong>span</strong>: Specifies the number of columns the group should span</li>
+                        <li>Global attributes (e.g., class, id, style)</li>
+                        <li>Use CSS for styling instead of deprecated HTML attributes</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col style="background-color: #f1f1f1"&gt;
+        &lt;col span="2" style="background-color: #e0e0e0"&gt;
+    &lt;/colgroup&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Column 1&lt;/th&gt;
+        &lt;th&gt;Column 2&lt;/th&gt;
+        &lt;th&gt;Column 3&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;col&gt;
+                </td>
+                <td>
+                    Specifies column properties.
+                </td>
+                <td>
+                    <ul>
+                        <li><strong>span</strong>: Specifies number of columns to span</li>
+                        <li>Global attributes (e.g., class, id, style)</li>
+                        <li>Use CSS for styling (width, alignment, etc.)</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre>
+&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col style="background-color: #f1f1f1"&gt;
+        &lt;col span="2" style="width: 100px"&gt;
+    &lt;/colgroup&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Column 1&lt;/th&gt;
+        &lt;th&gt;Column 2&lt;/th&gt;
+        &lt;th&gt;Column 3&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
